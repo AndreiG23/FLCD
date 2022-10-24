@@ -1,0 +1,49 @@
+The words - predefined tokens are specified between " and "
+
+
+
+<program> ::= <cmpdStmt>
+
+<cmpdStmt> ::= "{" <declarations>  <statements> "}"
+
+<declarations> ::= <declaration>|<declarations>   <declaration>
+<declaration> ::= "declare" <identifier> ":"  <type> ";"
+<type> ::= <typeSimple> | <arrayType>
+<typeSimple> ::= "int" | "string"
+<arrayType> ::= "array" "(" typeSimple ")"
+<statements> ::= <stmt> ";" | <statements> <stmt>
+<stmt> ::= <simpleStmt> | <structStmt>
+<simpleStmt> ::= <assignStmt> | <ioStmt>
+<structStmt> ::= <ifStmt> | <loopStmt>
+<loopStmt> ::= <forStmt> | <untilStmt>
+
+<op1Exp> ::= "+" <exp> | "-" <exp>
+<op2Term> ::= "*" <term> | "/" <term>
+<exp> ::= <term> <op1Exp> | <constant>
+<term> ::= <factor> <op2Term>
+<factor> ::= "(" <exp> ")" | <identifier> | <constant>
+
+<relation> ::=  "<" | "<=" | "=" | "!=" | ">=" | ">"
+<condition> ::= <exp> <relation> <exp>
+
+<assignStmt> ::= <identifier> "<-"  <exp>
+<ioStmt> ::= "read" <identifier> | "write" <exp> | "write" <identifier>
+<ifStmt> ::= "if" <condition> <cmpdStmt>
+<untilStmt> ::= "repeat" <cmpdStmt> "until" <condition>
+<forStmt> = "for" <identifier> "from" "(" <exp> "," <exp> "," <exp> ")" <cmpdStmt>
+
+
+
+
+
+constant ::= int | char | string | emptyArray
+emptyArray ::= "[" "]"
+
+<int> ::= 0 | [-] + <nonzeroDigit> + <seqOfDigits>
+<special> ::= " " | . | ? | ! | ,
+<seqOfSpecial> ::= <special>|<seqOfSpecial> <special>
+<character> ::= <digit> | <letter> | <special>
+<seqOfCharacters> ::= <character> | <seqOfCharacters> <character>
+<stringSeparator> ::= """
+<string> ::= <stringSeparator> <seqOfCharacters> <stringSeparator>
+

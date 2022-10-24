@@ -1,0 +1,23 @@
+{
+    declare a:int;
+    declare b:int;
+    declare gcd:int;
+    declare myString:string;
+
+    myString <- "ayy';
+    read(a!2#e);
+    read(b);
+
+    repeat
+    {
+        if a>b
+            a <- a-b;
+        else
+            b <- b-a;
+    }
+    until a = b
+
+    gcd <- a;
+    write(gcd);
+}
+

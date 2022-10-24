@@ -1,0 +1,22 @@
+
+- 2 simple data types and a user-defined type
+int, string
+arrays: array(int), array(string)
+
+- statements:
+grouped with {}
+
+- assignment
+id <- value
+
+- input/output
+read(input)
+write(output)
+
+- conditional
+if condition {}
+else {}
+
+- loop
+for i from (lowerLimit,upperLimit,step)
+repeat {} until condition
