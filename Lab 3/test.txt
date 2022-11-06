@@ -1,0 +1,25 @@
+{
+    declare a:int;
+    declare s:string;
+    declare v : array(int);
+
+    v <- [];
+    a<-2*3;
+    s <- "uu oo.?1!";
+
+    read( a);
+    write("eeee");
+
+    declare i:int;
+    for i from(1,5,1) {
+        if a<= b {
+            a <-i*2/2 +i;
+        }
+    }
+
+    repeat 
+    {
+        a <- a+1;
+    }
+    until 1!=a
+}

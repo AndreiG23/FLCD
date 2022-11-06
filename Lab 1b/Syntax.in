@@ -30,14 +30,10 @@ The words - predefined tokens are specified between " and "
 <ioStmt> ::= "read" <identifier> | "write" <exp> | "write" <identifier>
 <ifStmt> ::= "if" <condition> <cmpdStmt>
 <untilStmt> ::= "repeat" <cmpdStmt> "until" <condition>
-<forStmt> = "for" <identifier> "from" "(" <exp> "," <exp> "," <exp> ")" <cmpdStmt>
+<forStmt> ::= "for" <identifier> "from" "(" <exp> "," <exp> "," <exp> ")" <cmpdStmt>
 
-
-
-
-
-constant ::= int | char | string | emptyArray
-emptyArray ::= "[" "]"
+<constant> ::= int | char | string | emptyArray
+<emptyArray> ::= "[" "]"
 
 <int> ::= 0 | [-] + <nonzeroDigit> + <seqOfDigits>
 <special> ::= " " | . | ? | ! | ,
