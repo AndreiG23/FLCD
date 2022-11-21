@@ -1,0 +1,48 @@
+{
+	declare a:int;
+	declare b:int;
+	declare c:int;
+	declare max:int;
+	declare min:int;
+	a <- "aa aa";
+	b <- " ";
+	read(a);
+	read(b);
+	read(c);
+
+	if a>b 
+	{
+		if b>c
+		{
+			max <- a;
+			min <- c;
+		}
+		else
+		{
+			min <- b;
+			if a>c
+				{max <- a;}
+			else
+				{max <- c;};
+		};
+	}
+	else
+	{
+		if b<c
+		{
+			min <- a;
+			max <- c;
+		}
+		else
+		{
+			max <- b;
+			if a > c
+				{min <- c;}
+			else
+				{min <- a;};
+		};
+	};
+
+	write(min);
+	write(max);
+}

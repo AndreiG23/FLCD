@@ -1,0 +1,11 @@
+Symbol Table implemented with Hash table
+
+24  -> min        | 
+26  -> max        | 
+97  -> a          | 
+98  -> b          | 
+99  -> c          | 
+100 -> " "        | 
+188 -> "aa aa"    | 
+
+

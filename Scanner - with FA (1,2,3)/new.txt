@@ -1,0 +1,14 @@
+{ 
+    declare a:int; 
+    declare v:array(string); 
+    a <- 2 * 3; 
+    read(v); 
+    write(5); 
+    for i from (1,5,1) 
+    { 
+        if i<=a 
+        { 
+            v <- 12 * 5 / a + a; 
+        }; 
+    }; 
+}
