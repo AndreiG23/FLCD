@@ -1,0 +1,16 @@
+{
+    declare n:int;
+    declare nr:int;
+    declare i:int;
+    declare sum:int;
+
+    sum <- 0;
+    read(n);
+
+    for i from (1,n,1)
+    {
+        read(nr);
+        sum <- sum + nr;
+    };
+    write(sum);
+}

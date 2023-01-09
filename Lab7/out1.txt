@@ -1,0 +1,2 @@
+Sequence accepted
+['S$0', 'A$0', 'b', 'B$1', 'a', 'c']
