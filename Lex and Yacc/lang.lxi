@@ -1,0 +1,47 @@
+%{ 	 
+#include <math.h> 
+%} 
+
+CHARACTER 	\'[a-zA-Z0-9]\'
+INTEGER		^-?[1-9][0-9]*$
+STRING 	    ^\"[A-Za-z0-9\.\?\!, ]*\"$
+constant	{CHARACTER}|{INTEGER}|{STRING}
+identifier	^[a-z][\w]*$
+
+int         printf( "Reserved word: %s\n", yytext);
+string      printf( "Reserved word: %s\n", yytext);
+array       printf( "Reserved word: %s\n", yytext);
+declare     printf( "Reserved word: %s\n", yytext);
+read        printf( "Reserved word: %s\n", yytext);
+write       printf( "Reserved word: %s\n", yytext);
+if          printf( "Reserved word: %s\n", yytext);
+else        printf( "Reserved word: %s\n", yytext);
+repeat      printf( "Reserved word: %s\n", yytext);
+until       printf( "Reserved word: %s\n", yytext);
+for         printf( "Reserved word: %s\n", yytext);
+from        printf( "Reserved word: %s\n", yytext);
+
+{identifier}	printf( "Identifier: %s\n", yytext);
+{constant}	    printf( "Constant: %s\n", yytext );
+
+"+"       printf( "Operator: %s\n", yytext );
+"-"       printf( "Operator: %s\n", yytext );
+"*"       printf( "Operator: %s\n", yytext );
+"/"       printf( "Operator: %s\n", yytext );
+"<-"      printf( "Operator: %s\n", yytext );
+"="       printf( "Operator: %s\n", yytext );
+"!="      printf( "Operator: %s\n", yytext );
+"<"       printf( "Operator: %s\n", yytext );
+">"       printf( "Operator: %s\n", yytext );
+"<="      printf( "Operator: %s\n", yytext );
+">="      printf( "Operator: %s\n", yytext );
+" "       printf( "Separator: %s\n", yytext );
+"{"       printf( "Separator: %s\n", yytext );
+"}"       printf( "Separator: %s\n", yytext );
+"["       printf( "Separator: %s\n", yytext );
+"]"       printf( "Separator: %s\n", yytext );
+"("       printf( "Separator: %s\n", yytext );
+")"       printf( "Separator: %s\n", yytext );
+":"       printf( "Separator: %s\n", yytext );
+";"       printf( "Separator: %s\n", yytext );
+","       printf( "Separator: %s\n", yytext );
